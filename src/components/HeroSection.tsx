@@ -284,7 +284,7 @@ export function HeroSection({
           </div>
 
           {/* Image with Glow */}
-          <div className="relative pt-12 w-full px-4 sm:px-6 lg:px-8">
+          <div className="relative pt-12 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             {/* Background Glow - Behind the mockup */}
             <div className="absolute inset-0 top-12 -z-10">
               {/* Multiple layers for depth */}
@@ -294,62 +294,62 @@ export function HeroSection({
             </div>
             
             {/* Dashboard Preview Container */}
-            <div className="relative z-10 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8 lg:p-12 shadow-2xl backdrop-blur-sm">
+            <div className="relative z-10 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-6 lg:p-10 shadow-2xl backdrop-blur-sm max-w-6xl mx-auto">
               <div className="flex">
                 {/* Main Dashboard Content */}
-                <div className="flex-1 pr-8">
+                <div className="flex-1 pr-6">
                   {/* Dashboard Header */}
                   <div className="mb-6">
-                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Dashboard</h2>
-                    <p className="text-slate-600 dark:text-slate-400">Welcome back! Here's what's happening with your videos.</p>
+                    <h2 className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-white mb-2">Dashboard</h2>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm lg:text-base">Welcome back! Here's what's happening with your videos.</p>
                   </div>
                   
                   {/* Stats Grid */}
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
-                          <div className="w-4 h-4 bg-blue-600 rounded"></div>
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mb-6">
+                    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-3 lg:p-4">
+                      <div className="flex items-center gap-2 lg:gap-3">
+                        <div className="p-1.5 lg:p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                          <div className="w-3 h-3 lg:w-4 lg:h-4 bg-blue-600 rounded"></div>
                         </div>
                         <div>
-                          <p className="text-sm text-slate-600 dark:text-slate-400">Total Videos</p>
-                          <p className="text-lg font-semibold text-slate-900 dark:text-white">12</p>
+                          <p className="text-xs lg:text-sm text-slate-600 dark:text-slate-400">Total Videos</p>
+                          <p className="text-base lg:text-lg font-semibold text-slate-900 dark:text-white">12</p>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
-                          <div className="w-4 h-4 bg-green-600 rounded"></div>
+                    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-3 lg:p-4">
+                      <div className="flex items-center gap-2 lg:gap-3">
+                        <div className="p-1.5 lg:p-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                          <div className="w-3 h-3 lg:w-4 lg:h-4 bg-green-600 rounded"></div>
                         </div>
                         <div>
-                          <p className="text-sm text-slate-600 dark:text-slate-400">Total Duration</p>
-                          <p className="text-lg font-semibold text-slate-900 dark:text-white">30h 47m</p>
+                          <p className="text-xs lg:text-sm text-slate-600 dark:text-slate-400">Total Duration</p>
+                          <p className="text-base lg:text-lg font-semibold text-slate-900 dark:text-white">30h 47m</p>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
-                          <div className="w-4 h-4 bg-purple-600 rounded"></div>
+                    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-3 lg:p-4">
+                      <div className="flex items-center gap-2 lg:gap-3">
+                        <div className="p-1.5 lg:p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                          <div className="w-3 h-3 lg:w-4 lg:h-4 bg-purple-600 rounded"></div>
                         </div>
                         <div>
-                          <p className="text-sm text-slate-600 dark:text-slate-400">Recent Searches</p>
-                          <p className="text-lg font-semibold text-slate-900 dark:text-white">8</p>
+                          <p className="text-xs lg:text-sm text-slate-600 dark:text-slate-400">Recent Searches</p>
+                          <p className="text-base lg:text-lg font-semibold text-slate-900 dark:text-white">8</p>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-orange-100 dark:bg-orange-900/30 rounded-lg">
-                          <div className="w-4 h-4 bg-orange-600 rounded"></div>
+                    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 p-3 lg:p-4">
+                      <div className="flex items-center gap-2 lg:gap-3">
+                        <div className="p-1.5 lg:p-2 bg-orange-100 dark:bg-orange-900/30 rounded-lg">
+                          <div className="w-3 h-3 lg:w-4 lg:h-4 bg-orange-600 rounded"></div>
                         </div>
                         <div>
-                          <p className="text-sm text-slate-600 dark:text-slate-400">AI Highlights</p>
-                          <p className="text-lg font-semibold text-slate-900 dark:text-white">34</p>
+                          <p className="text-xs lg:text-sm text-slate-600 dark:text-slate-400">AI Highlights</p>
+                          <p className="text-base lg:text-lg font-semibold text-slate-900 dark:text-white">34</p>
                         </div>
                       </div>
                     </div>
@@ -418,38 +418,38 @@ export function HeroSection({
                 </div>
                 
                 {/* Right Sidebar - AI Features Panel */}
-                <div className="w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 p-6 rounded-r-xl">
+                <div className="w-72 lg:w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 p-4 lg:p-6 rounded-r-xl">
                   {/* AI Search Section */}
                   <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                      <SearchIcon className="h-5 w-5" />
+                    <h3 className="text-base lg:text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                      <SearchIcon className="h-4 w-4 lg:h-5 lg:w-5" />
                       AI Search
                     </h3>
-                    <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                    <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-3 lg:p-4 border border-slate-200 dark:border-slate-700">
                       <div className="flex items-center gap-3 mb-3">
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm text-slate-600 dark:text-slate-400">Search: "budget discussion"</span>
+                        <span className="text-xs lg:text-sm text-slate-600 dark:text-slate-400">Search: "budget discussion"</span>
                       </div>
                       <div className="space-y-2">
                         <div className="text-xs text-slate-500 dark:text-slate-500">Found in 3 videos:</div>
-                        <div className="text-sm text-slate-700 dark:text-slate-300">• Project Meeting (3:45-4:20)</div>
-                        <div className="text-sm text-slate-700 dark:text-slate-300">• Q4 Planning (12:15-13:02)</div>
-                        <div className="text-sm text-slate-700 dark:text-slate-300">• Team Sync (8:30-9:15)</div>
+                        <div className="text-xs lg:text-sm text-slate-700 dark:text-slate-300">• Project Meeting (3:45-4:20)</div>
+                        <div className="text-xs lg:text-sm text-slate-700 dark:text-slate-300">• Q4 Planning (12:15-13:02)</div>
+                        <div className="text-xs lg:text-sm text-slate-700 dark:text-slate-300">• Team Sync (8:30-9:15)</div>
                       </div>
                     </div>
                   </div>
                   
                   {/* AI Highlights Section */}
                   <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                      <SparklesIcon className="h-5 w-5" />
+                    <h3 className="text-base lg:text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                      <SparklesIcon className="h-4 w-4 lg:h-5 lg:w-5" />
                       Smart Highlights
                     </h3>
                     <div className="space-y-3">
                       <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 border border-blue-200 dark:border-blue-800">
                         <div className="flex items-center gap-2 mb-2">
                           <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                          <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Key Decision</span>
+                          <span className="text-xs lg:text-sm font-medium text-blue-700 dark:text-blue-300">Key Decision</span>
                         </div>
                         <p className="text-xs text-blue-600 dark:text-blue-400">"Let's allocate 40% budget to user acquisition"</p>
                         <span className="text-xs text-blue-500">Project Meeting • 3:45</span>
@@ -458,7 +458,7 @@ export function HeroSection({
                       <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3 border border-purple-200 dark:border-purple-800">
                         <div className="flex items-center gap-2 mb-2">
                           <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                          <span className="text-sm font-medium text-purple-700 dark:text-purple-300">Action Item</span>
+                          <span className="text-xs lg:text-sm font-medium text-purple-700 dark:text-purple-300">Action Item</span>
                         </div>
                         <p className="text-xs text-purple-600 dark:text-purple-400">"Sarah to implement search improvements by Friday"</p>
                         <span className="text-xs text-purple-500">Design Review • 1:23</span>
@@ -468,14 +468,14 @@ export function HeroSection({
                   
                   {/* Quick Actions */}
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Quick Actions</h3>
+                    <h3 className="text-base lg:text-lg font-semibold text-slate-900 dark:text-white mb-4">Quick Actions</h3>
                     <div className="space-y-3">
-                      <button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 px-4 rounded-lg flex items-center gap-2 transition-colors">
-                        <PlayIcon className="h-4 w-4" />
+                      <button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xs lg:text-sm py-2 px-3 lg:px-4 rounded-lg flex items-center gap-2 transition-colors">
+                        <PlayIcon className="h-3 w-3 lg:h-4 lg:w-4" />
                         Upload New Video
                       </button>
-                      <button className="w-full bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-900 dark:text-white text-sm py-2 px-4 rounded-lg flex items-center gap-2 transition-colors">
-                        <SearchIcon className="h-4 w-4" />
+                      <button className="w-full bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-900 dark:text-white text-xs lg:text-sm py-2 px-3 lg:px-4 rounded-lg flex items-center gap-2 transition-colors">
+                        <SearchIcon className="h-3 w-3 lg:h-4 lg:w-4" />
                         Advanced Search
                       </button>
                     </div>
