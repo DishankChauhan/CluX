@@ -71,7 +71,7 @@ export function Pricing({
   return (
     <div className="w-full flex flex-col items-center py-20">
       <div className="text-center space-y-4 mb-12 max-w-4xl">
-        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl">
           {title}
         </h2>
         <p className="text-muted-foreground text-lg whitespace-pre-line">
@@ -141,11 +141,11 @@ export function Pricing({
               </div>
             )}
             <div className="flex-1 flex flex-col">
-              <p className="text-base font-semibold text-muted-foreground">
+              <p className="text-base font-medium text-muted-foreground">
                 {plan.name}
               </p>
               <div className="mt-6 flex items-center justify-center gap-x-2">
-                <span className="text-5xl font-bold tracking-tight text-foreground">
+                <span className="text-5xl font-medium tracking-tight text-foreground">
                   <NumberFlow
                     value={
                       isMonthly ? Number(plan.price) : Number(plan.yearlyPrice)
@@ -165,7 +165,7 @@ export function Pricing({
                   />
                 </span>
                 {plan.period !== "Next 3 months" && (
-                  <span className="text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
+                  <span className="text-sm font-medium leading-6 tracking-wide text-muted-foreground">
                     / {plan.period}
                   </span>
                 )}

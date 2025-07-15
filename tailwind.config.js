@@ -8,7 +8,15 @@ module.exports = {
   ],
   theme: {
   	extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+      },
   		colors: {
+        "color-1": "hsl(var(--color-1))",
+        "color-2": "hsl(var(--color-2))",
+        "color-3": "hsl(var(--color-3))",
+        "color-4": "hsl(var(--color-4))",
+        "color-5": "hsl(var(--color-5))",
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
@@ -110,7 +118,11 @@ module.exports = {
 					'background-size': '200% 200%',
 					'background-position': 'right center'
 				}
-			}
+			},
+      rainbow: {
+        "0%": { "background-position": "0%" },
+        "100%": { "background-position": "200%" },
+      },
   		},
 		animation: {
 			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -119,7 +131,8 @@ module.exports = {
 			'appear-zoom': 'appear-zoom 0.5s ease-out forwards',
 			marquee: 'marquee var(--duration) linear infinite',
 			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
-			'gradient-x': 'gradient-x 15s ease infinite'
+			'gradient-x': 'gradient-x 15s ease infinite',
+      rainbow: "rainbow var(--speed, 2s) infinite linear",
 		},
   		maxWidth: {
   			container: '1200px'

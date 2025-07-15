@@ -1,6 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import GradientButton from "@/components/ui/gradient-button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRightIcon, PlayIcon, SearchIcon, SparklesIcon } from "lucide-react";
 import { Mockup, MockupFrame } from "@/components/ui/mockup";
@@ -267,19 +269,39 @@ export function HeroSection({
           </h1>
 
           {/* Description */}
-          <p className="text-md relative z-10 max-w-[550px] animate-appear font-medium text-muted-foreground opacity-0 delay-100 sm:text-xl">
+          <p className="text-md relative z-10 max-w-[90vw] sm:max-w-[800px] animate-appear font-medium text-muted-foreground opacity-0 delay-100 sm:text-xl leading-tight">
             {description}
           </p>
 
           {/* Actions */}
           <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
             {actions.map((action, index) => (
-              <Button key={index} variant={action.variant} size="lg" asChild>
-                <a href={action.href} className="flex items-center gap-2">
-                  {action.icon}
-                  {action.text}
+              action.variant === "glow" ? (
+                <a key={index} href={action.href}>
+                  <RainbowButton className="flex items-center gap-2 font-light">
+                    {action.icon}
+                    {action.text}
+                  </RainbowButton>
                 </a>
-              </Button>
+              ) : action.variant === "outline" ? (
+                <a key={index} href={action.href}>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="flex items-center gap-2 font-light bg-transparent border-2 border-muted-foreground/30 hover:bg-muted/10 hover:border-muted-foreground/50 transition-all duration-300 rounded-lg px-6 py-3"
+                  >
+                    {action.icon}
+                    {action.text}
+                  </Button>
+                </a>
+              ) : (
+                <a key={index} href={action.href}>
+                  <Button className="flex items-center gap-2 font-light">
+                    {action.icon}
+                    {action.text}
+                  </Button>
+                </a>
+              )
             ))}
           </div>
 
@@ -294,7 +316,7 @@ export function HeroSection({
             </div>
             
             {/* Dashboard Preview Container */}
-            <div className="relative z-10 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-6 lg:p-10 shadow-2xl backdrop-blur-sm max-w-6xl mx-auto">
+            <div className="relative z-10 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-6 lg:p-10 shadow-2xl backdrop-blur-sm max-w-7xl mx-auto">
               <div className="flex">
                 {/* Main Dashboard Content */}
                 <div className="flex-1 pr-6">

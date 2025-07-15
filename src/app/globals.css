@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -131,4 +138,20 @@
     transform: scale(1);
     }
   }
+
+/* Gradient Button Styles */
+.rotatingGradient {
+  background: linear-gradient(var(--r, 0deg), #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff0080);
+  animation: rotateColors 3s linear infinite;
+}
+
+@keyframes rotateColors {
+  0% { --r: 0deg; }
+  100% { --r: 360deg; }
+}
+
+:root {
+  --color-background: hsl(var(--background));
+  --color-text: hsl(var(--foreground));
+}
 }

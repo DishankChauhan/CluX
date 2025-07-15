@@ -9,6 +9,7 @@ import { WorldMap } from '@/components/ui/world-map'
 import { Pricing } from '@/components/ui/pricing'
 import { FaqSection } from '@/components/ui/faq-section'
 import { Footer } from '@/components/ui/footer'
+import { RainbowButton } from '@/components/ui/rainbow-button'
 import { motion } from 'framer-motion'
 import { PlayIcon, SearchIcon, SparklesIcon, ArrowRightIcon, VideoIcon, BrainIcon, BookmarkIcon, DatabaseIcon, ZapIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -25,11 +26,11 @@ export default function Home() {
           }
         }}
         title="CluX"
-        description="Transform your personal videos with AI-powered transcription, semantic search, and auto-generated highlights. Find any moment in your video library instantly."
+        description="AI-powered video management with smart transcription, semantic search, and instant highlights."
         actions={[
           {
             text: "Get Started",
-            href: "/dashboard",
+            href: "/signup",
             icon: <PlayIcon className="h-4 w-4" />,
             variant: "glow"
           },
@@ -46,8 +47,8 @@ export default function Home() {
       <section className="py-24 px-4">
         <div className="max-w-container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Powerful AI Features</h2>
-            <p className="text-xl text-muted-foreground">Everything you need to organize, search, and analyze your video content</p>
+            <h2 className="text-3xl font-medium mb-4">Powerful AI Features</h2>
+            <p className="text-xl text-muted-foreground font-light">Everything you need to organize, search, and analyze your video content</p>
           </div>
           
           <FeaturesGrid />
@@ -58,7 +59,7 @@ export default function Home() {
       <section className="py-16 px-4 border-t border-border/50">
         <div className="max-w-container mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-lg font-medium text-muted-foreground mb-8">Built using this tech stack</h3>
+            <h3 className="text-lg font-normal text-muted-foreground mb-8">Built using this tech stack</h3>
           </div>
           
           <div className="relative">
@@ -83,24 +84,28 @@ export default function Home() {
       <section className="py-24 px-4">
         <div className="max-w-container mx-auto">
           <div className="flex flex-col items-center justify-center">
-            <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base mb-4">
+            <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base mb-4 font-light">
               The future of video management starts here
             </p>
             <TypewriterEffectSmooth words={[
-              { text: "Transform" },
-              { text: "your" },
-              { text: "video" },
-              { text: "library" },
-              { text: "with" },
-              { text: "CluX.", className: "text-blue-500 dark:text-blue-500" },
+              { text: "Transform", className: "font-light" },
+              { text: "your", className: "font-light" },
+              { text: "video", className: "font-light" },
+              { text: "library", className: "font-light" },
+              { text: "with", className: "font-light" },
+              { text: "CluX.", className: "text-blue-500 dark:text-blue-500 font-medium" },
             ]} />
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-8">
-              <button className="w-40 h-10 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
-                Get Started
-              </button>
-              <button className="w-40 h-10 rounded-xl bg-white dark:bg-black text-black dark:text-white border border-black dark:border-white text-sm font-semibold hover:bg-muted/50 transition-all duration-200">
-                Watch Demo
-              </button>
+              <a href="/signup">
+                <RainbowButton className="w-40 h-10">
+                  Get Started
+                </RainbowButton>
+              </a>
+              <a href="/demo">
+                <button className="w-40 h-10 rounded-lg border-2 border-muted-foreground/20 bg-transparent hover:bg-muted/10 hover:border-muted-foreground/40 transition-all duration-300 font-light">
+                  Watch Demo
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -110,7 +115,7 @@ export default function Home() {
       <section className="py-40 px-4 bg-muted/20">
         <div className="max-w-7xl mx-auto text-center">
           <div className="text-center mb-16">
-            <h2 className="font-bold text-xl md:text-4xl mb-4">
+            <h2 className="font-medium text-xl md:text-4xl mb-4">
               Global{" "}
               <span className="text-muted-foreground">
                 {"Connectivity".split("").map((char, idx) => (
@@ -126,7 +131,7 @@ export default function Home() {
                 ))}
               </span>
             </h2>
-            <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto py-4">
+            <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto py-4 font-light">
               CluX connects content creators and teams worldwide. From startups to enterprises, our intelligent video management platform serves users across the globe, enabling seamless collaboration and instant video discovery.
             </p>
           </div>
@@ -360,10 +365,10 @@ const FeatureItem = ({ area, icon, title, description }: FeatureItemProps) => {
               {icon}
             </div>
             <div className="space-y-3">
-              <h3 className="pt-0.5 text-xl leading-[1.375rem] font-semibold font-sans tracking-[-0.04em] md:text-2xl md:leading-[1.875rem] text-balance text-foreground">
+              <h3 className="pt-0.5 text-xl leading-[1.375rem] font-medium font-sans tracking-[-0.04em] md:text-2xl md:leading-[1.875rem] text-balance text-foreground">
                 {title}
               </h3>
-              <p className="font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-muted-foreground">
+              <p className="font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-muted-foreground font-light">
                 {description}
               </p>
             </div>
@@ -385,7 +390,7 @@ const TechStackItem = ({ name, label }: TechStackItemProps) => {
       <div className="p-3 rounded-lg border border-border bg-background/50 hover:bg-muted/50 transition-colors duration-200">
         <TechIcon name={name} className="h-8 w-8 text-foreground" />
       </div>
-      <span className="text-sm font-medium text-muted-foreground">{label}</span>
+      <span className="text-sm font-light text-muted-foreground">{label}</span>
     </div>
   );
 };
