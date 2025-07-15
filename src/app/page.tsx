@@ -6,6 +6,9 @@ import Marquee from '@/components/ui/marquee'
 import { TechIcon } from '@/components/ui/tech-icons'
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect'
 import { WorldMap } from '@/components/ui/world-map'
+import { Pricing } from '@/components/ui/pricing'
+import { FaqSection } from '@/components/ui/faq-section'
+import { Footer } from '@/components/ui/footer'
 import { motion } from 'framer-motion'
 import { PlayIcon, SearchIcon, SparklesIcon, ArrowRightIcon, VideoIcon, BrainIcon, BookmarkIcon, DatabaseIcon, ZapIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -178,6 +181,119 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      <section className="py-24 px-4 flex justify-center" id="pricing">
+        <div className="w-full max-w-7xl">
+          <Pricing
+          title="Choose Your CluX Plan"
+          description="Transform your video library with AI-powered tools\nAll plans include core features with scalable usage limits."
+          plans={[
+            {
+              name: "Starter",
+              price: "9",
+              yearlyPrice: "7",
+              period: "month",
+              features: [
+                "Up to 10 hours of video processing",
+                "AI transcription with timestamps",
+                "Basic semantic search",
+                "Standard support",
+                "2GB storage included"
+              ],
+              description: "Perfect for individual creators getting started",
+              buttonText: "Start Free Trial",
+              href: "/signup?plan=starter",
+              isPopular: false,
+            },
+            {
+              name: "Professional",
+              price: "29",
+              yearlyPrice: "23",
+              period: "month",
+              features: [
+                "Up to 100 hours of video processing",
+                "Advanced AI transcription & analysis",
+                "Advanced semantic search & highlights",
+                "Priority support",
+                "50GB storage included",
+                "Custom integrations",
+                "Team collaboration tools"
+              ],
+              description: "Ideal for professionals and small teams",
+              buttonText: "Get Started",
+              href: "/signup?plan=professional",
+              isPopular: true,
+            },
+            {
+              name: "Enterprise",
+              price: "99",
+              yearlyPrice: "79",
+              period: "month",
+              features: [
+                "Unlimited video processing",
+                "Enterprise AI features",
+                "Custom search algorithms",
+                "24/7 dedicated support",
+                "Unlimited storage",
+                "Advanced analytics",
+                "White-label options",
+                "On-premise deployment"
+              ],
+              description: "For organizations with advanced needs",
+              buttonText: "Contact Sales",
+              href: "/contact?plan=enterprise",
+              isPopular: false,
+            },
+          ]}
+        />
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FaqSection
+        title="Frequently Asked Questions"
+        description="Everything you need to know about CluX and our AI-powered video management platform."
+        items={[
+          {
+            question: "How does CluX work?",
+            answer: "CluX transforms your video management in 4 simple steps: 1) Upload your videos in any format 2) Our AI automatically transcribes and analyzes content using advanced speech recognition 3) Smart indexing creates searchable metadata, highlights, and timestamps 4) Use natural language search to instantly find any moment, topic, or discussion across your entire video library. Features include semantic search, auto-generated summaries, speaker identification, and intelligent cost optimization."
+          },
+          {
+            question: "How does CluX's AI transcription work?",
+            answer: "CluX uses advanced AI models including OpenAI Whisper to provide highly accurate transcriptions with speaker identification, timestamps, and confidence scoring. Our system processes your videos securely and delivers results within minutes."
+          },
+          {
+            question: "What video formats does CluX support?",
+            answer: "CluX supports all major video formats including MP4, MOV, AVI, MKV, and more. Our intelligent processing automatically optimizes videos for web playback while maintaining quality."
+          },
+          {
+            question: "How does semantic search work?",
+            answer: "Our semantic search uses vector embeddings to understand the meaning and context of your video content. You can search using natural language queries like 'discussions about budget' or 'key decisions made' and find relevant moments instantly."
+          },
+          {
+            question: "Is my video data secure?",
+            answer: "Absolutely. We use enterprise-grade encryption for data in transit and at rest. Your videos are processed securely and we never share your content with third parties. You maintain full ownership of your data."
+          },
+          {
+            question: "Can I integrate CluX with other tools?",
+            answer: "Yes! CluX offers APIs and webhooks for custom integrations. Professional and Enterprise plans include pre-built integrations with popular productivity tools and cloud storage services."
+          },
+          {
+            question: "What happens if I exceed my plan limits?",
+            answer: "We'll notify you before you reach your limits. You can either upgrade your plan or purchase additional usage credits. We never interrupt your service without notice."
+          }
+        ]}
+        contactInfo={{
+          title: "Still have questions?",
+          description: "Get in touch with our team for personalized assistance.",
+          buttonText: "Contact Support",
+          onContact: () => window.open('/contact', '_blank')
+        }}
+      />
+
+      {/* Footer Section */}
+      <Footer />
     </main>
   )
 }
