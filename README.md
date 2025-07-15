@@ -1,6 +1,9 @@
 # AI Clip Curator
 
+<img width="2808" height="1760" alt="clux landing page" src="https://github.com/user-attachments/assets/edd32655-3150-41b3-9d54-83c8c2ff502a" />
+
 🎬 AI-powered video clip curator for personal videos with transcription, semantic search, and auto-generated highlights.
+
 
 ## ✨ Features
 
